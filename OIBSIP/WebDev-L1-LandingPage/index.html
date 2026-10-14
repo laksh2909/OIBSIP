@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velora Coffee | A Better Kind of Coffee</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #faf5ed;
+      color: #34251f;
+      line-height: 1.6;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+      background: #faf5ed;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 10px #34251f12;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #633d2d;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #34251f;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #a8663c;
+    }
+
+    .hero {
+      min-height: 78vh;
+      padding: 70px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      background: linear-gradient(120deg, #f5e5d0, #e6c4a2);
+    }
+
+    .hero-content {
+      max-width: 560px;
+    }
+
+    .eyebrow {
+      color: #895331;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      line-height: 1.1;
+      margin: 18px 0;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 28px;
+      max-width: 480px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #633d2d;
+      color: white;
+      padding: 13px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #895331;
+    }
+
+    .coffee-art {
+      width: min(340px, 90%);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: radial-gradient(circle at 40% 35%, #c99a6c, #633d2d 65%, #34251f);
+      display: grid;
+      place-items: center;
+      font-size: 7rem;
+      box-shadow: 0 25px 50px #633d2d30;
+      flex-shrink: 0;
+    }
+
+    section {
+      padding: 75px 8%;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 2.3rem;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 650px;
+      margin: 0 auto 35px;
+      color: #705b4e;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 35px;
+    }
+
+    .feature {
+      padding: 28px 22px;
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 8px 25px #34251f0c;
+    }
+
+    .feature span {
+      font-size: 2.5rem;
+    }
+
+    .feature h3 {
+      margin: 12px 0 8px;
+    }
+
+    .story {
+      background: #633d2d;
+      color: #fff5e9;
+    }
+
+    .story p {
+      max-width: 700px;
+      margin: 15px auto 25px;
+      color: #f0dfd0;
+    }
+
+    .story .btn {
+      background: #f0d0ac;
+      color: #34251f;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #34251f;
+      color: #faf5ed;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        padding: 18px 5%;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 6%;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .coffee-art {
+        width: 220px;
+        font-size: 5rem;
+      }
+
+      section {
+        padding: 55px 6%;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Velora Coffee</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#features">Our Coffee</a></li>
+      <li><a href="#story">Our Story</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="hero-content">
+      <span class="eyebrow">Made for your moments</span>
+      <h1>Life feels better with coffee.</h1>
+      <p>
+        Discover rich aromas, carefully selected beans, and comforting
+        flavours that turn an ordinary moment into something special.
+      </p>
+      <a href="#features" class="btn">Explore Our Coffee</a>
+    </div>
+    <div class="coffee-art" aria-label="Illustration of a coffee cup" role="img">
+      ☕
+    </div>
+  </header>
+
+  <section id="features">
+    <h2 class="section-title">A Little Cup of Something Special</h2>
+    <p class="intro">
+      Thoughtfully crafted coffee for slow mornings, busy afternoons,
+      and everything in between.
+    </p>
+
+    <div class="features">
+      <article class="feature">
+        <span>🌱</span>
+        <h3>Quality Beans</h3>
+        <p>Carefully selected beans chosen for their rich aroma and flavour.</p>
+      </article>
+
+      <article class="feature">
+        <span>☕</span>
+        <h3>Crafted with Care</h3>
+        <p>Every cup celebrates the simple pleasure of a well-made coffee.</p>
+      </article>
+
+      <article class="feature">
+        <span>🤎</span>
+        <h3>Moments of Comfort</h3>
+        <p>Your little daily ritual for pausing, recharging, and enjoying life.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="story" id="story">
+    <h2 class="section-title">More Than Just Coffee</h2>
+    <p>
+      At Velora, we believe the best moments don't need to be complicated.
+      A warm cup, a familiar aroma, and a little time for yourself can make
+      all the difference.
+    </p>
+    <a href="#home" class="btn">Back to Top</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Velora Coffee. Crafted for coffee lovers.</p>
+  </footer>
+</body>
+</html>
